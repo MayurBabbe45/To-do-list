@@ -57,13 +57,15 @@ class App extends Component {
     const items = this.state.items;
     items.map(item => {
       if (item.key === key) { 
-        item.text=text
+        item.text = text;
       }
-    })
+      return item; // add a return statement here
+    });
     this.setState({
-      items:items,
-    })
+      items: items,
+    });
   }
+  
   render() {
     return (
       <div className='App'>
